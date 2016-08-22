@@ -19,6 +19,8 @@ Small python script that:
 3. Finds your current city using openstreetmap nominatim
 4. Prints the weather in the city you currently are in.
 
+![Screen Shot](/img/img.png)
 
 ## Why?
 Lazy.
+
