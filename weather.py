@@ -55,7 +55,10 @@ def main():
     cur_loc = find_current_location(json.dumps(query))['location']
     cur_city = get_current_city(cur_loc['lat'], cur_loc['lng'])
     print 'Current measured location: %s' % cur_city['display_name']
-    print get_weather_in(cur_city['address']['city'])
+    try:
+        print get_weather_in(cur_city['address']['city'])
+    except KeyError:
+        print get_weather_in(cur_city['address']['village'])
 
 
 if __name__ == '__main__':
